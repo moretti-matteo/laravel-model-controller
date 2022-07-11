@@ -4,3 +4,22 @@
   box-sizing: border-box;
 }
 
+.container {
+  margin: 10px auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.container .card {
+  width: calc(25% - 10px);
+  background-color: rgb(203, 203, 203);
+  padding: 10px;
+}
+
+.container .card > * {
+  margin-bottom: 10px;
+}
+
