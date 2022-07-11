@@ -9,6 +9,9 @@ class MovieController extends Controller
 {
     public function index(){
         $movies = Movie::all();
-        return view("welcome",compact('movies'));
+        
+        if(count($movies) > 0){
+            return view("welcome",compact('movies'));
+        }else return view("notfound");
     }
 }
