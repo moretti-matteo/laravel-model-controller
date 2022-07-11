@@ -13,12 +13,13 @@
     <h1 style="text-align: center">Movies:</h1>
     <div class="container">
         @foreach ($movies as $movie)
-            <div class="card">
-                <h1>title: {{ $movie->original_title }}</h1>
-                <h2>nationality: {{ $movie->nationality }}</h2>
-                <h3>date: {{ $movie->date }}</h3>
-                <h3>vote: {{ $movie->vote }}/10</h3>
-            </div>
+        <x-card 
+        :original_title="$movie->original_title"
+        :nationality="$movie->nationality"
+        :date="$movie->date"
+        :vote="$movie->vote"
+        />
+           
         @endforeach
     </div>
 
